@@ -1,0 +1,21 @@
+<p>display-data works!</p>
+<h2>Display Data</h2>
+<div>Integer: {{ integerData }}</div>
+<div>String: {{ stringData }}</div>
+<div>Date: {{ dateData | date }}</div>
+
+<ul>
+  <li *ngFor="let item of arrayData">{{ item }}</li>
+</ul>
+
+<select [(ngModel)]="selectedCombo">
+  <option value="textbox">Textbox</option>
+  <option value="textarea">Textarea</option>
+</select>
+
+<div *ngIf="selectedCombo === 'textbox'">
+  <input type="text" [(ngModel)]="textboxValue" />
+</div>
+<div *ngIf="selectedCombo === 'textarea'">
+  <textarea [(ngModel)]="textareaValue"></textarea>
+</div>

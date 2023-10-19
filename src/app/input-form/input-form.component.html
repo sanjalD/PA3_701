@@ -1,0 +1,10 @@
+<p>input-form works!</p>
+<h2>User Input Form</h2>
+<form (ngSubmit)="submitForm()">
+  <label for="name">Name:</label>
+  <input type="text" id="name" [(ngModel)]="user.name" name="name" required />
+
+  <!-- Add other input fields for personal details -->
+
+  <button type="submit">Submit</button>
+</form>
